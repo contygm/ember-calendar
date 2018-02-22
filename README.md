@@ -14,10 +14,13 @@ Description from Udemy: Learn how to build ambitious single-page web application
 
 `ember g route name-of-route --path=/name-of-route`
 
+`ember g controller name-of-app`
+
 
 ## Models
+- Blue print of data structures
 
-- Definition: Blue print of data structures
-
-## Routes
-- best place for model related actions
+## Actions
+- model manipulations are best in Controller
+- transitions best in Routes
+- Controller bubbles up to Route, but not necessarily a good idea to have one action split in 2

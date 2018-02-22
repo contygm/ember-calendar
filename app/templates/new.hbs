@@ -5,11 +5,11 @@
     <p><label for="name"> Name: </label></p>
     <p>{{input type="text" id="name" value=model.name}}</p>
 
-    <p><label for="name"> Name: </label></p>
+    <p><label for="name"> Notes: </label></p>
     <p>{{textarea id="notes" value=model.notes}}</p>
     <p>
-      <button class="btn">Save</button>
-      <button class="btn">Canvel</button>
+      <button class="btn" {{action 'save'}}>Save</button>
+      <button class="btn" {{action 'cancel'}}>Cancel</button>
     </p>
   </form>
 </div>
