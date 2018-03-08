@@ -1,0 +1,34 @@
+<div class="container-fluid">
+  <h1 class="h1"> Calendars </h1>
+  <div class='toolbar'>
+    {{#link-to 'new' class='btn btn-success'}}
+      Create Calendar
+    {{/link-to}}
+  </div>
+
+  <ul class='cal-list'>
+    <li class="row title-row">
+        <span class='title col-md-3'>Name</span>
+        <span class='title col-md-6'>Note</span>
+        <span class='title col-md-1'>Streak</span>
+        <span class='title col-md-2 action-title'>Actions</span>
+    </li>
+    {{#each sortedCalendars as |cal|}}
+       <li class="row">
+         <span class='name col-md-3'>{{cal.name}}</span>
+         <span class='notes col-md-6'>{{cal.notes}}</span>
+         <span class='streak col-md-1'>X days</span>
+         <span class='streak col-md-1'>
+           {{#link-to 'edit' cal class='btn btn-info'}}
+             View
+           {{/link-to}}
+         </span>
+         <span class='streak col-md-1'>
+           {{#link-to 'calendar' cal class='btn btn-warning'}}
+             Edit
+           {{/link-to}}
+         </span>
+       </li>
+    {{/each}}
+  </ul>
+</div>
