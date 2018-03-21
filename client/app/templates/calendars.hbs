@@ -19,15 +19,14 @@
          <span class='notes col-md-6'>{{cal.notes}}</span>
          <span class='streak col-md-1'>X days</span>
          <span class='streak col-md-1'>
-           {{#link-to 'edit' cal class='btn btn-info'}}
+           {{#button 'edit' cal class='btn btn-info'}}
              View
-           {{/link-to}}
+           {{/button}}
          </span>
          <span class='streak col-md-1'>
-           {{#link-to 'calendar' cal class='btn btn-warning'}}
+           {{#button 'calendar' cal class='btn btn-warning'}}
              Edit
-           {{/link-to}}
-           {{#bs-button type="warning" onClick=(action "submit")}}Warning Button{{/bs-button}}
+           {{/button}}
          </span>
        </li>
     {{/each}}
