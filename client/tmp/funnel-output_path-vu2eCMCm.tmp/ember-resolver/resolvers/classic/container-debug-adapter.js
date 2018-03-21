@@ -1,0 +1,1 @@
+/Users/genevieve.conty/Documents/my-new-app/client/tmp/funnel-input_base_path-VVLzLqGX.tmp/resolvers/classic/container-debug-adapter.js

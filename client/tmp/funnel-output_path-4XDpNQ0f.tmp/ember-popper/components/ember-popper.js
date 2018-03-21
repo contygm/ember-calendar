@@ -1,0 +1,1 @@
+/Users/genevieve.conty/Documents/my-new-app/client/node_modules/ember-popper/addon/components/ember-popper.js

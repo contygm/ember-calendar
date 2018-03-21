@@ -1,0 +1,1 @@
+/Users/genevieve.conty/Documents/my-new-app/client/tmp/broccoli_merge_trees-input_base_path-6fU2KXSG.tmp/1/my-new-app/tests/tests.lint-test.js

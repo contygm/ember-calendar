@@ -1,0 +1,1 @@
+/Users/genevieve.conty/Documents/my-new-app/client/tmp/creator-output_path-l8GjdX1U.tmp/version.js

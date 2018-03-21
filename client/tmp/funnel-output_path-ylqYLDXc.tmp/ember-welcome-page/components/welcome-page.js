@@ -1,1 +1,0 @@
-/Users/genevieve.conty/Documents/my-new-app/client/tmp/funnel-input_base_path-LnEe9dQx.tmp/components/welcome-page.js

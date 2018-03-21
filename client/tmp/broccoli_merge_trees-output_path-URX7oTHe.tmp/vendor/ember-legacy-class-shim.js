@@ -1,0 +1,1 @@
+/Users/genevieve.conty/Documents/my-new-app/client/node_modules/ember-legacy-class-shim/vendor/ember-legacy-class-shim.js

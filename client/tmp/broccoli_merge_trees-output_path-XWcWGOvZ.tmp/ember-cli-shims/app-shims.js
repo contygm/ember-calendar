@@ -1,1 +1,0 @@
-/Users/genevieve.conty/Documents/my-new-app/client/tmp/broccoli_merge_trees-input_base_path-gQB4Ntlb.tmp/0/ember-cli-shims/app-shims.js

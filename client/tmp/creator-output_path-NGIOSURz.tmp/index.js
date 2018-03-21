@@ -1,0 +1,1 @@
+export { default } from 'my-new-app/config/environment';
