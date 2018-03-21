@@ -1,0 +1,1 @@
+/Users/genevieve.conty/Documents/my-new-app/client/tmp/broccoli_merge_trees-input_base_path-j0ex8j4k.tmp/0/monkey-patches.js

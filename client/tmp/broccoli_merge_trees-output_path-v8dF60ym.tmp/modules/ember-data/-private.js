@@ -1,0 +1,1 @@
+/Users/genevieve.conty/Documents/my-new-app/client/tmp/broccoli_merge_trees-input_base_path-Y7mKWuXz.tmp/1/modules/ember-data/-private.js
