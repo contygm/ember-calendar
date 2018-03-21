@@ -9,10 +9,17 @@ const Router = Ember.Router.extend({
 Router.map(function() {
   this.route('calendars');
 
-  this.route('new', { path: 'calendars/new'});
-  this.route('calendar', {path: 'calendars/:calendar_id'});
+  this.route('new', {
+    path: 'calendars/new'
+  });
 
-  this.route('edit', { path: 'calendars/:calendar_id/edit'});
+  this.route('calendar', {
+    path: 'calendars/:calendar_id'
+  });
+
+  this.route('edit', {
+    path: 'calendars/:calendar_id/edit'
+  });
 });
 
 export default Router;

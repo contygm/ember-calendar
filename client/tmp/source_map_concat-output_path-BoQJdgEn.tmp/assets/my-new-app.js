@@ -22,8 +22,6 @@ define('my-new-app/app', ['exports', 'my-new-app/resolver', 'ember-load-initiali
 
   var App = void 0;
 
-  Ember.MODEL_FACTORY_INJECTIONS = true;
-
   App = Ember.Application.extend({
     modulePrefix: _environment.default.modulePrefix,
     podModulePrefix: _environment.default.podModulePrefix,
@@ -1241,10 +1239,17 @@ define('my-new-app/router', ['exports', 'my-new-app/config/environment'], functi
   Router.map(function () {
     this.route('calendars');
 
-    this.route('new', { path: 'calendars/new' });
-    this.route('calendar', { path: 'calendars/:calendar_id' });
+    this.route('new', {
+      path: 'calendars/new'
+    });
 
-    this.route('edit', { path: 'calendars/:calendar_id/edit' });
+    this.route('calendar', {
+      path: 'calendars/:calendar_id'
+    });
+
+    this.route('edit', {
+      path: 'calendars/:calendar_id/edit'
+    });
   });
 
   exports.default = Router;
@@ -1332,7 +1337,7 @@ define("my-new-app/templates/calendars", ["exports"], function (exports) {
   Object.defineProperty(exports, "__esModule", {
     value: true
   });
-  exports.default = Ember.HTMLBars.template({ "id": "V4FBdJWc", "block": "{\"statements\":[[11,\"div\",[]],[15,\"class\",\"container-fluid\"],[13],[0,\"\\n  \"],[11,\"h1\",[]],[15,\"class\",\"h1\"],[13],[0,\" Calendars \"],[14],[0,\"\\n  \"],[11,\"div\",[]],[15,\"class\",\"toolbar\"],[13],[0,\"\\n\"],[6,[\"link-to\"],[\"new\"],[[\"class\"],[\"btn btn-success\"]],{\"statements\":[[0,\"      Create Calendar\\n\"]],\"locals\":[]},null],[0,\"  \"],[14],[0,\"\\n\\n  \"],[11,\"ul\",[]],[15,\"class\",\"cal-list\"],[13],[0,\"\\n    \"],[11,\"li\",[]],[15,\"class\",\"row title-row\"],[13],[0,\"\\n        \"],[11,\"span\",[]],[15,\"class\",\"title col-md-3\"],[13],[0,\"Name\"],[14],[0,\"\\n        \"],[11,\"span\",[]],[15,\"class\",\"title col-md-6\"],[13],[0,\"Note\"],[14],[0,\"\\n        \"],[11,\"span\",[]],[15,\"class\",\"title col-md-1\"],[13],[0,\"Streak\"],[14],[0,\"\\n        \"],[11,\"span\",[]],[15,\"class\",\"title col-md-2 action-title\"],[13],[0,\"Actions\"],[14],[0,\"\\n    \"],[14],[0,\"\\n\"],[6,[\"each\"],[[28,[\"sortedCalendars\"]]],null,{\"statements\":[[0,\"       \"],[11,\"li\",[]],[15,\"class\",\"row\"],[13],[0,\"\\n         \"],[11,\"span\",[]],[15,\"class\",\"name col-md-3\"],[13],[1,[28,[\"cal\",\"name\"]],false],[14],[0,\"\\n         \"],[11,\"span\",[]],[15,\"class\",\"notes col-md-6\"],[13],[1,[28,[\"cal\",\"notes\"]],false],[14],[0,\"\\n         \"],[11,\"span\",[]],[15,\"class\",\"streak col-md-1\"],[13],[0,\"X days\"],[14],[0,\"\\n         \"],[11,\"span\",[]],[15,\"class\",\"streak col-md-1\"],[13],[0,\"\\n\"],[6,[\"button\"],[\"edit\",[28,[\"cal\"]]],[[\"class\"],[\"btn btn-info\"]],{\"statements\":[[0,\"             View\\n\"]],\"locals\":[]},null],[0,\"         \"],[14],[0,\"\\n         \"],[11,\"span\",[]],[15,\"class\",\"streak col-md-1\"],[13],[0,\"\\n\"],[6,[\"button\"],[\"calendar\",[28,[\"cal\"]]],[[\"class\"],[\"btn btn-warning\"]],{\"statements\":[[0,\"             Edit\\n\"]],\"locals\":[]},null],[0,\"         \"],[14],[0,\"\\n       \"],[14],[0,\"\\n\"]],\"locals\":[\"cal\"]},null],[0,\"  \"],[14],[0,\"\\n\"],[14],[0,\"\\n\"]],\"locals\":[],\"named\":[],\"yields\":[],\"hasPartials\":false}", "meta": { "moduleName": "my-new-app/templates/calendars.hbs" } });
+  exports.default = Ember.HTMLBars.template({ "id": "+L56u82W", "block": "{\"statements\":[[11,\"div\",[]],[15,\"class\",\"container-fluid\"],[13],[0,\"\\n  \"],[11,\"h1\",[]],[15,\"class\",\"h1\"],[13],[0,\" Calendars \"],[14],[0,\"\\n  \"],[11,\"div\",[]],[15,\"class\",\"toolbar\"],[13],[0,\"\\n\"],[6,[\"link-to\"],[\"new\"],[[\"class\"],[\"btn btn-success\"]],{\"statements\":[[0,\"      Create Calendar\\n\"]],\"locals\":[]},null],[0,\"  \"],[14],[0,\"\\n\\n  \"],[11,\"ul\",[]],[15,\"class\",\"cal-list\"],[13],[0,\"\\n    \"],[11,\"li\",[]],[15,\"class\",\"row title-row\"],[13],[0,\"\\n        \"],[11,\"span\",[]],[15,\"class\",\"title col-md-3\"],[13],[0,\"Name\"],[14],[0,\"\\n        \"],[11,\"span\",[]],[15,\"class\",\"title col-md-6\"],[13],[0,\"Note\"],[14],[0,\"\\n        \"],[11,\"span\",[]],[15,\"class\",\"title col-md-1\"],[13],[0,\"Streak\"],[14],[0,\"\\n        \"],[11,\"span\",[]],[15,\"class\",\"title col-md-2 action-title\"],[13],[0,\"Actions\"],[14],[0,\"\\n    \"],[14],[0,\"\\n\"],[6,[\"each\"],[[28,[\"sortedCalendars\"]]],null,{\"statements\":[[0,\"       \"],[11,\"li\",[]],[15,\"class\",\"row\"],[13],[0,\"\\n         \"],[11,\"span\",[]],[15,\"class\",\"name col-md-3\"],[13],[1,[28,[\"cal\",\"name\"]],false],[14],[0,\"\\n         \"],[11,\"span\",[]],[15,\"class\",\"notes col-md-6\"],[13],[1,[28,[\"cal\",\"notes\"]],false],[14],[0,\"\\n         \"],[11,\"span\",[]],[15,\"class\",\"streak col-md-1\"],[13],[0,\"X days\"],[14],[0,\"\\n         \"],[11,\"span\",[]],[15,\"class\",\"streak col-md-1\"],[13],[0,\"\\n\"],[6,[\"link-to\"],[\"calendar\",[28,[\"cal\"]]],[[\"class\"],[\"btn btn-info\"]],{\"statements\":[[0,\"             View\\n\"]],\"locals\":[]},null],[0,\"         \"],[14],[0,\"\\n         \"],[11,\"span\",[]],[15,\"class\",\"streak col-md-1\"],[13],[0,\"\\n\"],[6,[\"link-to\"],[\"edit\",[28,[\"cal\"]]],[[\"class\"],[\"btn btn-warning\"]],{\"statements\":[[0,\"             Edit\\n\"]],\"locals\":[]},null],[0,\"         \"],[14],[0,\"\\n       \"],[14],[0,\"\\n\"]],\"locals\":[\"cal\"]},null],[0,\"  \"],[14],[0,\"\\n\"],[14],[0,\"\\n\"]],\"locals\":[],\"named\":[],\"yields\":[],\"hasPartials\":false}", "meta": { "moduleName": "my-new-app/templates/calendars.hbs" } });
 });
 define('my-new-app/templates/components/ember-popper', ['exports', 'ember-popper/templates/components/ember-popper'], function (exports, _emberPopper) {
   'use strict';
@@ -1353,7 +1358,7 @@ define("my-new-app/templates/edit", ["exports"], function (exports) {
   Object.defineProperty(exports, "__esModule", {
     value: true
   });
-  exports.default = Ember.HTMLBars.template({ "id": "F/NjVSxB", "block": "{\"statements\":[[11,\"h2\",[]],[13],[0,\"Edit Calendar\"],[14],[0,\"\\n\\n\"],[11,\"div\",[]],[15,\"class\",\"form\"],[13],[0,\"\\n  \"],[11,\"form\",[]],[13],[0,\"\\n    \"],[11,\"p\",[]],[13],[11,\"label\",[]],[15,\"for\",\"name\"],[13],[0,\" Name: \"],[14],[14],[0,\"\\n    \"],[11,\"p\",[]],[13],[1,[33,[\"input\"],null,[[\"type\",\"id\",\"value\"],[\"text\",\"name\",[28,[\"model\",\"name\"]]]]],false],[14],[0,\"\\n\\n    \"],[11,\"p\",[]],[13],[11,\"label\",[]],[15,\"for\",\"name\"],[13],[0,\" Notes: \"],[14],[14],[0,\"\\n    \"],[11,\"p\",[]],[13],[1,[33,[\"textarea\"],null,[[\"id\",\"value\"],[\"notes\",[28,[\"model\",\"notes\"]]]]],false],[14],[0,\"\\n    \"],[11,\"p\",[]],[13],[0,\"\\n      \"],[6,[\"button\"],null,[[\"class\",\"action\"],[\"btn btn-primary\",\"save\"]],{\"statements\":[[0,\"Save\"]],\"locals\":[]},null],[0,\"\\n      \"],[6,[\"button\"],null,[[\"class\",\"action\"],[\"btn\",\"cancel\"]],{\"statements\":[[0,\"Cancel\"]],\"locals\":[]},null],[0,\"\\n    \"],[14],[0,\"\\n  \"],[14],[0,\"\\n\"],[14],[0,\"\\n\"]],\"locals\":[],\"named\":[],\"yields\":[],\"hasPartials\":false}", "meta": { "moduleName": "my-new-app/templates/edit.hbs" } });
+  exports.default = Ember.HTMLBars.template({ "id": "TqkHIuoM", "block": "{\"statements\":[[11,\"h2\",[]],[13],[0,\"Edit Calendar\"],[14],[0,\"\\n\\n\"],[11,\"div\",[]],[15,\"class\",\"form\"],[13],[0,\"\\n  \"],[11,\"form\",[]],[13],[0,\"\\n    \"],[11,\"p\",[]],[13],[11,\"label\",[]],[15,\"for\",\"name\"],[13],[0,\" Name: \"],[14],[14],[0,\"\\n    \"],[11,\"p\",[]],[13],[1,[33,[\"input\"],null,[[\"type\",\"id\",\"value\"],[\"text\",\"name\",[28,[\"model\",\"name\"]]]]],false],[14],[0,\"\\n\\n    \"],[11,\"p\",[]],[13],[11,\"label\",[]],[15,\"for\",\"name\"],[13],[0,\" Notes: \"],[14],[14],[0,\"\\n    \"],[11,\"p\",[]],[13],[1,[33,[\"textarea\"],null,[[\"id\",\"value\"],[\"notes\",[28,[\"model\",\"notes\"]]]]],false],[14],[0,\"\\n    \"],[11,\"p\",[]],[13],[0,\"\\n      \"],[11,\"button\",[]],[15,\"class\",\"btn btn-primary\"],[5,[\"action\"],[[28,[null]],\"save\"]],[13],[0,\"Save\"],[14],[0,\"\\n      \"],[11,\"button\",[]],[15,\"class\",\"btn btn-danger\"],[5,[\"action\"],[[28,[null]],\"delete\"]],[13],[0,\"Delete\"],[14],[0,\"\\n      \"],[11,\"button\",[]],[15,\"class\",\"btn\"],[5,[\"action\"],[[28,[null]],\"cancel\"]],[13],[0,\"Cancel\"],[14],[0,\"\\n    \"],[14],[0,\"\\n  \"],[14],[0,\"\\n\"],[14],[0,\"\\n\"]],\"locals\":[],\"named\":[],\"yields\":[],\"hasPartials\":false}", "meta": { "moduleName": "my-new-app/templates/edit.hbs" } });
 });
 define("my-new-app/templates/new", ["exports"], function (exports) {
   "use strict";
@@ -1361,7 +1366,7 @@ define("my-new-app/templates/new", ["exports"], function (exports) {
   Object.defineProperty(exports, "__esModule", {
     value: true
   });
-  exports.default = Ember.HTMLBars.template({ "id": "4fNh9vHQ", "block": "{\"statements\":[[11,\"h2\",[]],[13],[0,\"New Calendar\"],[14],[0,\"\\n\\n\"],[11,\"div\",[]],[15,\"class\",\"form\"],[13],[0,\"\\n  \"],[11,\"form\",[]],[13],[0,\"\\n    \"],[11,\"p\",[]],[13],[11,\"label\",[]],[15,\"for\",\"name\"],[13],[0,\" Name: \"],[14],[14],[0,\"\\n    \"],[11,\"p\",[]],[13],[1,[33,[\"input\"],null,[[\"type\",\"id\",\"value\"],[\"text\",\"name\",[28,[\"model\",\"name\"]]]]],false],[14],[0,\"\\n\\n    \"],[11,\"p\",[]],[13],[11,\"label\",[]],[15,\"for\",\"name\"],[13],[0,\" Notes: \"],[14],[14],[0,\"\\n    \"],[11,\"p\",[]],[13],[1,[33,[\"textarea\"],null,[[\"id\",\"value\"],[\"notes\",[28,[\"model\",\"notes\"]]]]],false],[14],[0,\"\\n    \"],[11,\"p\",[]],[13],[0,\"\\n      \"],[6,[\"button\"],null,[[\"class\",\"action\"],[\"btn btn-primary\",\"save\"]],{\"statements\":[[0,\"Save\"]],\"locals\":[]},null],[0,\"\\n      \"],[6,[\"button\"],null,[[\"class\",\"action\"],[\"btn\",\"cancel\"]],{\"statements\":[[0,\"Cancel\"]],\"locals\":[]},null],[0,\"\\n    \"],[14],[0,\"\\n  \"],[14],[0,\"\\n\"],[14],[0,\"\\n\"]],\"locals\":[],\"named\":[],\"yields\":[],\"hasPartials\":false}", "meta": { "moduleName": "my-new-app/templates/new.hbs" } });
+  exports.default = Ember.HTMLBars.template({ "id": "3KuKs1VF", "block": "{\"statements\":[[11,\"h2\",[]],[13],[0,\"New Calendar\"],[14],[0,\"\\n\\n\"],[11,\"div\",[]],[15,\"class\",\"form\"],[13],[0,\"\\n  \"],[11,\"form\",[]],[13],[0,\"\\n    \"],[11,\"p\",[]],[13],[11,\"label\",[]],[15,\"for\",\"name\"],[13],[0,\" Name: \"],[14],[14],[0,\"\\n    \"],[11,\"p\",[]],[13],[1,[33,[\"input\"],null,[[\"type\",\"id\",\"value\"],[\"text\",\"name\",[28,[\"model\",\"name\"]]]]],false],[14],[0,\"\\n\\n    \"],[11,\"p\",[]],[13],[11,\"label\",[]],[15,\"for\",\"name\"],[13],[0,\" Notes: \"],[14],[14],[0,\"\\n    \"],[11,\"p\",[]],[13],[1,[33,[\"textarea\"],null,[[\"id\",\"value\"],[\"notes\",[28,[\"model\",\"notes\"]]]]],false],[14],[0,\"\\n    \"],[11,\"p\",[]],[13],[0,\"\\n      \"],[11,\"button\",[]],[15,\"class\",\"btn btn-primary\"],[5,[\"action\"],[[28,[null]],\"save\"]],[13],[0,\"Save\"],[14],[0,\"\\n      \"],[11,\"button\",[]],[15,\"class\",\"btn\"],[5,[\"action\"],[[28,[null]],\"cancel\"]],[13],[0,\"Cancel\"],[14],[0,\"\\n    \"],[14],[0,\"\\n  \"],[14],[0,\"\\n\"],[14],[0,\"\\n\"]],\"locals\":[],\"named\":[],\"yields\":[],\"hasPartials\":false}", "meta": { "moduleName": "my-new-app/templates/new.hbs" } });
 });
 
 

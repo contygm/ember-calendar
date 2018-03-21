@@ -14,10 +14,17 @@ define('my-new-app/router', ['exports', 'my-new-app/config/environment'], functi
   Router.map(function () {
     this.route('calendars');
 
-    this.route('new', { path: 'calendars/new' });
-    this.route('calendar', { path: 'calendars/:calendar_id' });
+    this.route('new', {
+      path: 'calendars/new'
+    });
 
-    this.route('edit', { path: 'calendars/:calendar_id/edit' });
+    this.route('calendar', {
+      path: 'calendars/:calendar_id'
+    });
+
+    this.route('edit', {
+      path: 'calendars/:calendar_id/edit'
+    });
   });
 
   exports.default = Router;

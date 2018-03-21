@@ -8,8 +8,6 @@ define('my-new-app/app', ['exports', 'my-new-app/resolver', 'ember-load-initiali
 
   var App = void 0;
 
-  Ember.MODEL_FACTORY_INJECTIONS = true;
-
   App = Ember.Application.extend({
     modulePrefix: _environment.default.modulePrefix,
     podModulePrefix: _environment.default.podModulePrefix,
