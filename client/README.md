@@ -1,6 +1,4 @@
-#Ember Calendar & Related Expriements
-
-##Ember Calendar
+# Ember Calendar
 [Udemy Course Link](http://www.udemy.com/complete-ember-2-developer-course)
 
 Description from Udemy: Learn how to build ambitious single-page web applications using the power of Ember.js and Ember CLI.
@@ -17,6 +15,9 @@ Description from Udemy: Learn how to build ambitious single-page web application
 
 `ember g controller name-of-app`
 
+##Conventions
+- ember component names need dash in them
+- integration tests are for components
 
 ## Models
 - Blue print of data structures
