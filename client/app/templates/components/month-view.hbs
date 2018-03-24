@@ -1,1 +1,22 @@
-{{yield}}
+<table>
+  <thead>
+    <tr>
+      <td> Sunday </td>
+      <td> Monday </td>
+      <td> Tuesday </td>
+      <td> Wednesday </td>
+      <td> Thursday </td>
+      <td> Friday </td>
+      <td> Saturday </td>
+    </tr>
+  </thead>
+  <tbody>
+    {{#each weeks as |week|}}
+      <tr>
+        {{#each week as |day|}}
+          <td>{{day.num}}</td>
+        {{/each}}
+      </tr>
+    {{/each}}
+  </tbody>
+</table>

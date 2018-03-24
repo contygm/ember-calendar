@@ -52,7 +52,7 @@ export default Ember.Component.extend({
           weeks.push(week);
         }
 
-        return ;
+        return weeks;
       })
     })
   })
