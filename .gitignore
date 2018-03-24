@@ -4,11 +4,6 @@
 /dist
 /tmp
 
-# client compiled output
-client/dist
-client/tmp
-client/node_modules
-
 # dependencies
 /node_modules
 /bower_components

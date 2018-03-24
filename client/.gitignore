@@ -2,7 +2,6 @@
 
 # compiled output
 /dist
-/client/dist
 /tmp
 /doc/output
 
