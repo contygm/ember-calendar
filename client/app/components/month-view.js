@@ -3,7 +3,12 @@ import DS from 'ember-data';
 
 // TODO: extract
 // this gets the model's value for each day
-function getValue(days, dayObj) {
+function getValue(days, dayObj, i) {
+  if (i++ % 2 === 0) {
+    dayObj.value = true;
+    return
+  }
+  
   const day = days.filter(day => day.get('date') === dayObj.date[0]);
 
   if (day) {
@@ -45,7 +50,7 @@ export default Ember.Component.extend({
               num: day.format('D'),
               isCurrentMonth: currentMonth === day.month(),
             }
-            getValue(days, dayObj);
+            getValue(days, dayObj, i);
             week.push(dayObj);
             day.add(1, 'd');
           }

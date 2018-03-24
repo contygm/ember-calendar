@@ -14,7 +14,7 @@
     {{#each weeks as |week|}}
       <tr>
         {{#each week as |day|}}
-          <td>{{day.num}}</td>
+          {{calendar-cell day=day}}
         {{/each}}
       </tr>
     {{/each}}
