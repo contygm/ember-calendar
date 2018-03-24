@@ -22,7 +22,7 @@ module.exports = function (type, options = {}) {
   }
 
   const update = (id, attrs) => {
-    Object.assign(get(id), attrs);
+    return Object.assign(get(id), attrs);
   }
 
   const remove = id => {

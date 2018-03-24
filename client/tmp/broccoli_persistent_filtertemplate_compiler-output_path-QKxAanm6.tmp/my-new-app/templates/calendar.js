@@ -1,1 +1,0 @@
-export default Ember.HTMLBars.template({"id":"TLawkOkM","block":"{\"statements\":[[0,\"\\n\"]],\"locals\":[],\"named\":[],\"yields\":[],\"hasPartials\":false}","meta":{"moduleName":"my-new-app/templates/calendar.hbs"}});

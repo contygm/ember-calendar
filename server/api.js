@@ -32,7 +32,6 @@ api.route('/calendars/:id')
 
   .patch((req, res) => {
     let data = req.body.data;
-
     res.json({
       data: calendar.res(calendar.update(data.id, data.attributes))
     })

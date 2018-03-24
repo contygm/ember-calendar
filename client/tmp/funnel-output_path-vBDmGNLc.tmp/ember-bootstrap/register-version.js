@@ -1,1 +1,0 @@
-/Users/genevieve.conty/Documents/my-new-app/client/tmp/funnel-input_base_path-ffx6Ntr4.tmp/ember-bootstrap/register-version.template

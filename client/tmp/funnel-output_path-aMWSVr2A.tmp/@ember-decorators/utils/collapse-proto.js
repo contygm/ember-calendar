@@ -1,1 +1,0 @@
-/Users/genevieve.conty/Documents/my-new-app/client/tmp/funnel-input_base_path-F1Q8cTVJ.tmp/collapse-proto.js

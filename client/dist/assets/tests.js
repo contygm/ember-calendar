@@ -20,9 +20,14 @@ define('my-new-app/tests/app.lint-test', [], function () {
     assert.ok(true, 'controllers/calendars.js should pass ESLint\n\n');
   });
 
+  QUnit.test('controllers/edit.js', function (assert) {
+    assert.expect(1);
+    assert.ok(true, 'controllers/edit.js should pass ESLint\n\n');
+  });
+
   QUnit.test('controllers/new.js', function (assert) {
     assert.expect(1);
-    assert.ok(false, 'controllers/new.js should pass ESLint\n\n8:15 - Unexpected console statement. (no-console)');
+    assert.ok(true, 'controllers/new.js should pass ESLint\n\n');
   });
 
   QUnit.test('models/calendar.js', function (assert) {
@@ -189,6 +194,11 @@ define('my-new-app/tests/tests.lint-test', [], function () {
     assert.ok(true, 'unit/controllers/calendars-test.js should pass ESLint\n\n');
   });
 
+  QUnit.test('unit/controllers/edit-test.js', function (assert) {
+    assert.expect(1);
+    assert.ok(true, 'unit/controllers/edit-test.js should pass ESLint\n\n');
+  });
+
   QUnit.test('unit/controllers/new-test.js', function (assert) {
     assert.expect(1);
     assert.ok(true, 'unit/controllers/new-test.js should pass ESLint\n\n');
@@ -227,6 +237,20 @@ define('my-new-app/tests/unit/controllers/calendars-test', ['ember-qunit'], func
   'use strict';
 
   (0, _emberQunit.moduleFor)('controller:calendars', 'Unit | Controller | calendars', {
+    // Specify the other units that are required for this test.
+    // needs: ['controller:foo']
+  });
+
+  // Replace this with your real tests.
+  (0, _emberQunit.test)('it exists', function (assert) {
+    var controller = this.subject();
+    assert.ok(controller);
+  });
+});
+define('my-new-app/tests/unit/controllers/edit-test', ['ember-qunit'], function (_emberQunit) {
+  'use strict';
+
+  (0, _emberQunit.moduleFor)('controller:edit', 'Unit | Controller | edit', {
     // Specify the other units that are required for this test.
     // needs: ['controller:foo']
   });

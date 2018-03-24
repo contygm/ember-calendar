@@ -836,6 +836,38 @@ define('my-new-app/controllers/calendars', ['exports'], function (exports) {
     sortedCalendars: Ember.computed.sort('model', 'calendarSorting')
   });
 });
+define('my-new-app/controllers/edit', ['exports'], function (exports) {
+  'use strict';
+
+  Object.defineProperty(exports, "__esModule", {
+    value: true
+  });
+  exports.default = Ember.Controller.extend({
+    actions: {
+      save: function save() {
+        var _this = this;
+
+        this.get('model').save().then(function () {
+          return _this.transitionToRoute('calendars');
+        }, function () {
+          return Ember.Logger.error('MODEL DID NOT SAVE');
+        });
+      },
+      delete: function _delete() {
+        var _this2 = this;
+
+        // NOTE: destroyRecord sends to server to actually delete record
+        // See note in new Controller
+        //
+        this.get('model').destroyRecord().then(function () {
+          return _this2.transitionToRoute('calendars');
+        }, function () {
+          return Ember.Logger.error('MODEL DID DELETE');
+        });
+      }
+    }
+  });
+});
 define('my-new-app/controllers/new', ['exports'], function (exports) {
   'use strict';
 
@@ -850,12 +882,18 @@ define('my-new-app/controllers/new', ['exports'], function (exports) {
         this.get('model').save().then(function () {
           return _this.transitionToRoute('calendars');
         }, function () {
-          return console.log('OOPS MODEL DID N0T SAVE');
+          return Ember.Logger.error('MODEL DID NOT SAVE');
         });
       },
       cancel: function cancel() {
+        // NOTE: deleteRecord deletes from local storage so
+        // nothing sent to server.
+        // Fine since record hasn't been created yet
+        //
         this.get('model').deleteRecord();
+
         // allows controller's cancel() to bubble up to route/new
+        //
         return true;
       }
     }
@@ -1260,7 +1298,11 @@ define('my-new-app/routes/calendar', ['exports'], function (exports) {
   Object.defineProperty(exports, "__esModule", {
     value: true
   });
-  exports.default = Ember.Route.extend({});
+  exports.default = Ember.Route.extend({
+    model: function model() {
+      return this.store.find('calendar');
+    }
+  });
 });
 define('my-new-app/routes/calendars', ['exports'], function (exports) {
   'use strict';
@@ -1280,7 +1322,14 @@ define('my-new-app/routes/edit', ['exports'], function (exports) {
   Object.defineProperty(exports, "__esModule", {
     value: true
   });
-  exports.default = Ember.Route.extend({});
+  exports.default = Ember.Route.extend({
+
+    actions: {
+      cancel: function cancel() {
+        this.transitionTo('calendars');
+      }
+    }
+  });
 });
 define('my-new-app/routes/new', ['exports'], function (exports) {
   'use strict';
@@ -1329,7 +1378,7 @@ define("my-new-app/templates/calendar", ["exports"], function (exports) {
   Object.defineProperty(exports, "__esModule", {
     value: true
   });
-  exports.default = Ember.HTMLBars.template({ "id": "TLawkOkM", "block": "{\"statements\":[[0,\"\\n\"]],\"locals\":[],\"named\":[],\"yields\":[],\"hasPartials\":false}", "meta": { "moduleName": "my-new-app/templates/calendar.hbs" } });
+  exports.default = Ember.HTMLBars.template({ "id": "+KqotNM8", "block": "{\"statements\":[[1,[26,[\"outlet\"]],false],[0,\"\\n\"]],\"locals\":[],\"named\":[],\"yields\":[],\"hasPartials\":false}", "meta": { "moduleName": "my-new-app/templates/calendar.hbs" } });
 });
 define("my-new-app/templates/calendars", ["exports"], function (exports) {
   "use strict";
@@ -1390,6 +1439,6 @@ catch(err) {
 });
 
 if (!runningTests) {
-  require("my-new-app/app")["default"].create({"name":"my-new-app","version":"0.0.0+43900197"});
+  require("my-new-app/app")["default"].create({"name":"my-new-app","version":"0.0.0+a6fc5040"});
 }
 //# sourceMappingURL=my-new-app.map

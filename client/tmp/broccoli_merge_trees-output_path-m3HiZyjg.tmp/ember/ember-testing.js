@@ -1,1 +1,0 @@
-/Users/genevieve.conty/Documents/my-new-app/client/node_modules/ember-source/dist/ember-testing.js

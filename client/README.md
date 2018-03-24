@@ -25,4 +25,7 @@ Description from Udemy: Learn how to build ambitious single-page web application
 - transitions best in Routes
 - Controller bubbles up to Route, but not necessarily a good idea to have one action split in 2
 
-```ember serve --proxy http://localhost:4300```
+```ember serve --proxy http://localhost:4300
+```
+
+`node server`

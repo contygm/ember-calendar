@@ -1,1 +1,0 @@
-/Users/genevieve.conty/Documents/my-new-app/client/node_modules/ember-cli/lib/broccoli/testem.js
