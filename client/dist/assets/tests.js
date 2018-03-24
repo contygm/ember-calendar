@@ -17,7 +17,7 @@ define('my-new-app/tests/app.lint-test', [], function () {
 
   QUnit.test('controllers/calendar.js', function (assert) {
     assert.expect(1);
-    assert.ok(true, 'controllers/calendar.js should pass ESLint\n\n');
+    assert.ok(false, 'controllers/calendar.js should pass ESLint\n\n4:14 - \'moment\' is not defined. (no-undef)');
   });
 
   QUnit.test('controllers/calendars.js', function (assert) {
