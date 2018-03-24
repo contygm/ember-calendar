@@ -1,5 +1,6 @@
-# Complete Ember 2 Developer Course
+#Ember Calendar & Related Expriements
 
+##Ember Calendar
 [Udemy Course Link](http://www.udemy.com/complete-ember-2-developer-course)
 
 Description from Udemy: Learn how to build ambitious single-page web applications using the power of Ember.js and Ember CLI.
@@ -25,7 +26,8 @@ Description from Udemy: Learn how to build ambitious single-page web application
 - transitions best in Routes
 - Controller bubbles up to Route, but not necessarily a good idea to have one action split in 2
 
-```ember serve --proxy http://localhost:4300
-```
+```ember serve --proxy http://localhost:4300```
 
 `node server`
+
+https://www.emberaddons.com/

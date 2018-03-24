@@ -15,6 +15,11 @@ define('my-new-app/tests/app.lint-test', [], function () {
     assert.ok(true, 'app.js should pass ESLint\n\n');
   });
 
+  QUnit.test('controllers/calendar.js', function (assert) {
+    assert.expect(1);
+    assert.ok(true, 'controllers/calendar.js should pass ESLint\n\n');
+  });
+
   QUnit.test('controllers/calendars.js', function (assert) {
     assert.expect(1);
     assert.ok(true, 'controllers/calendars.js should pass ESLint\n\n');
@@ -189,6 +194,11 @@ define('my-new-app/tests/tests.lint-test', [], function () {
     assert.ok(true, 'unit/adapters/application-test.js should pass ESLint\n\n');
   });
 
+  QUnit.test('unit/controllers/calendar-test.js', function (assert) {
+    assert.expect(1);
+    assert.ok(true, 'unit/controllers/calendar-test.js should pass ESLint\n\n');
+  });
+
   QUnit.test('unit/controllers/calendars-test.js', function (assert) {
     assert.expect(1);
     assert.ok(true, 'unit/controllers/calendars-test.js should pass ESLint\n\n');
@@ -231,6 +241,20 @@ define('my-new-app/tests/unit/adapters/application-test', ['ember-qunit'], funct
   (0, _emberQunit.test)('it exists', function (assert) {
     var adapter = this.subject();
     assert.ok(adapter);
+  });
+});
+define('my-new-app/tests/unit/controllers/calendar-test', ['ember-qunit'], function (_emberQunit) {
+  'use strict';
+
+  (0, _emberQunit.moduleFor)('controller:calendar', 'Unit | Controller | calendar', {
+    // Specify the other units that are required for this test.
+    // needs: ['controller:foo']
+  });
+
+  // Replace this with your real tests.
+  (0, _emberQunit.test)('it exists', function (assert) {
+    var controller = this.subject();
+    assert.ok(controller);
   });
 });
 define('my-new-app/tests/unit/controllers/calendars-test', ['ember-qunit'], function (_emberQunit) {

@@ -825,6 +825,16 @@ define('my-new-app/components/welcome-page', ['exports', 'ember-welcome-page/com
     }
   });
 });
+define('my-new-app/controllers/calendar', ['exports'], function (exports) {
+  'use strict';
+
+  Object.defineProperty(exports, "__esModule", {
+    value: true
+  });
+  exports.default = Ember.Controller.extend({
+    monthName: 'yo'
+  });
+});
 define('my-new-app/controllers/calendars', ['exports'], function (exports) {
   'use strict';
 
@@ -1299,9 +1309,9 @@ define('my-new-app/routes/calendar', ['exports'], function (exports) {
     value: true
   });
   exports.default = Ember.Route.extend({
-    model: function model() {
-      return this.store.find('calendar');
-    }
+    // model() {
+    //   return this.store.find('calendar');
+    // }
   });
 });
 define('my-new-app/routes/calendars', ['exports'], function (exports) {
@@ -1378,7 +1388,7 @@ define("my-new-app/templates/calendar", ["exports"], function (exports) {
   Object.defineProperty(exports, "__esModule", {
     value: true
   });
-  exports.default = Ember.HTMLBars.template({ "id": "+KqotNM8", "block": "{\"statements\":[[1,[26,[\"outlet\"]],false],[0,\"\\n\"]],\"locals\":[],\"named\":[],\"yields\":[],\"hasPartials\":false}", "meta": { "moduleName": "my-new-app/templates/calendar.hbs" } });
+  exports.default = Ember.HTMLBars.template({ "id": "iRTyBswD", "block": "{\"statements\":[[4,\" {{#link-to 'calendars' class='btn btn-primary'}}\\n  Back\\n{{/link-to}} \"],[0,\"\\n\\n\"],[11,\"h1\",[]],[13],[1,[28,[\"model\",\"name\"]],false],[14],[0,\"\\n\\n\"],[11,\"div\",[]],[15,\"class\",\"\"],[13],[0,\"\\n  \"],[11,\"h2\",[]],[13],[1,[26,[\"monthName\"]],false],[14],[0,\"\\n\"],[14],[0,\"\\n\"]],\"locals\":[],\"named\":[],\"yields\":[],\"hasPartials\":false}", "meta": { "moduleName": "my-new-app/templates/calendar.hbs" } });
 });
 define("my-new-app/templates/calendars", ["exports"], function (exports) {
   "use strict";
@@ -1439,6 +1449,6 @@ catch(err) {
 });
 
 if (!runningTests) {
-  require("my-new-app/app")["default"].create({"name":"my-new-app","version":"0.0.0+a6fc5040"});
+  require("my-new-app/app")["default"].create({"name":"my-new-app","version":"0.0.0+4293cd33"});
 }
 //# sourceMappingURL=my-new-app.map
