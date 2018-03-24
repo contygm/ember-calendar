@@ -3,12 +3,7 @@ import DS from 'ember-data';
 
 // TODO: extract
 // this gets the model's value for each day
-function getValue(days, dayObj, i) {
-  if (i++ % 2 === 0) {
-    dayObj.value = true;
-    return
-  }
-  
+function getValue(days, dayObj) {
   const day = days.filter(day => day.get('date') === dayObj.date[0]);
 
   if (day) {
@@ -21,11 +16,14 @@ export default Ember.Component.extend({
   // NOTE: computed mechanics (callings days)
   //
   weeks: Ember.computed('days', function () {
-
+    // doing things cuz days are loaded seperately from the server
+    // so it returns promise, not array
+    //
     return DS.PromiseArray.create({
       promise: this.get('days').then(function (days) {
         // first day of current month
         //
+        console.log(days);
         const day = moment().date(1);
         const currentMonth = day.month();
 
@@ -50,7 +48,7 @@ export default Ember.Component.extend({
               num: day.format('D'),
               isCurrentMonth: currentMonth === day.month(),
             }
-            getValue(days, dayObj, i);
+            getValue(days, dayObj);
             week.push(dayObj);
             day.add(1, 'd');
           }
