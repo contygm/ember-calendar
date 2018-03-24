@@ -1,2 +1,11 @@
 
 @import "ember-bootstrap/bootstrap";
+
+.has-value {
+  background-color: lightgreen;
+}
+
+.not-current {
+  filter: contrast(25%);
+  blur: 10px;
+}
