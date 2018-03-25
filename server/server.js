@@ -11,7 +11,6 @@ var app = express();
   .use(bodyParser.json({ type: 'application/vnd.api+json' }))
   .use('/api', api)
   .post('/token', (req, res) => {
-    console.log('POST TOKEN');
     if (req.body.username === 'hello' && req.body.password) {
       res.send({ access_token: 'accessToken'});
     } else {
