@@ -6,7 +6,7 @@ export default DS.Model.extend({
   notes: DS.attr('string', { defaultValue: ''}),
   days: DS.hasMany('day'),
   count: 0,
-  // TODO: fix so loads streak initally
+  // TODO: fix so loads after refresh
   counter: Ember.observer('days.@each.value', function() {
     this.get('days').then(days => {
       let count = 0;
