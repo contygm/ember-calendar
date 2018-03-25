@@ -20,6 +20,7 @@ Router.map(function() {
   this.route('edit', {
     path: 'calendars/:calendar_id/edit'
   });
+  this.route('login');
 });
 
 export default Router;
