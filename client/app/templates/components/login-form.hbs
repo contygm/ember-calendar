@@ -1,1 +1,5 @@
-{{yield}}
+<form {{action 'authenticate' on='submit' }}>
+  {{input value=username placeholder="Username"}}
+  {{input type='password' value=password  placeholder="p@$$W0rd"}}
+  <button type="submit" name="login-button">Log In</button>
+</form>
