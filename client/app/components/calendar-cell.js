@@ -11,11 +11,12 @@ export default Ember.Component.extend({
     return !this.get('day.isCurrentMonth');
   }),
 
-  hasValue: Ember.computed.notEmpty('day.value'),
+  hasValue: Ember.computed('day.value', function () {
+    return this.get('day.value');
+  }),
 
   click() {
     const date = this.get('day.date');
-
     if (this.get('day.isCurrentMonth') && moment().isSameOrAfter(date)) {
       const newValue = !this.get('day.value');
 

@@ -1,8 +1,8 @@
 const express = require('express');
 const Data = require('./data');
 
-const calendar = Data('calendar', { hasMany: 'days' });
-const day = Data('days');
+const calendar = Data('calendar', { hasMany: 'day' });
+const day = Data('day');
 
 var api = express.Router();
 
@@ -51,7 +51,6 @@ api.route('/days')
   .post((req, res) => {
     const data = req.body.data;
     const cal = calendar.get(data.relationships.calendar.data.id);
-    console.log('cal', cal);
     const d = day.insert(data.attributes, cal);
 
     res.json({ data: day.res(d) })
