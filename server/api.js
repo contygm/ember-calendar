@@ -7,6 +7,10 @@ const day = Data('day');
 var api = express.Router();
 
 api.all('*', (req, res, next) =>{
+  if (req.headers.authorization !== 'Bearer accessToken') {
+    return res.status(401).send('unauthorized');
+  }
+
   res.type('application/vnd.api+json');
   next();
 });
