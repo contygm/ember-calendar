@@ -23,7 +23,6 @@ export default Ember.Component.extend({
       promise: this.get('days').then(function (days) {
         // first day of current month
         //
-        console.log(days);
         const day = moment().date(1);
         const currentMonth = day.month();
 
@@ -49,6 +48,7 @@ export default Ember.Component.extend({
               isCurrentMonth: currentMonth === day.month(),
             }
             getValue(days, dayObj);
+            console.log(dayObj);
             week.push(dayObj);
             day.add(1, 'd');
           }
@@ -57,6 +57,25 @@ export default Ember.Component.extend({
 
         return weeks;
       })
-    })
-  })
+    });
+  }),
+  store: Ember.inject.service(),
+  actions: {
+    markDay: function (date, value) {
+      let existingRecord = this.get('days').filterBy('date', date)[0];
+
+      if (existingRecord) {
+        existingRecord.set('value', value);
+        existingRecord.save();
+      } else {
+        const newRecord = this.get('store').createRecord('day', {
+          date,
+          value
+        })
+
+        this.get('days').pushObject(newRecord);
+        newRecord.save();
+      }
+    }
+  }
 });

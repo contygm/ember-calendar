@@ -17,9 +17,10 @@ export default Ember.Component.extend({
     const date = this.get('day.date');
 
     if (this.get('day.isCurrentMonth') && moment().isSameOrAfter(date)) {
-      const oldValue = this.get('day.value');
+      const newValue = !this.get('day.value');
 
-      this.set('day.value', !oldValue);
+      this.set('day.value', newValue);
+      this.get('markDay')(date, newValue);
     }
   }
 });

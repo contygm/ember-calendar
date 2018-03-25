@@ -5,7 +5,7 @@ var id = 1;
 // when no options var is passed in
 module.exports = function (type, options = {}) {
   var hasMany = options.hasMany;
-
+  console.log('type', type);
   data[type] = [];
 
   const all = () => data[type];
@@ -14,7 +14,8 @@ module.exports = function (type, options = {}) {
 
   const insert = (obj, parent) => {
     obj.id = id++;
-
+    console.log('obj', obj);
+    console.log('parent', parent);
     if (hasMany) obj[hasMany] = [];
     if (parent) parent[type].push(obj.id);
     data[type].push(obj);
@@ -30,6 +31,7 @@ module.exports = function (type, options = {}) {
   }
 
   const res = item => {
+    console.log('type', type);
     let obj = {
       type,
       id: item.id,

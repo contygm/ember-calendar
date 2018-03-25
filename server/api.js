@@ -1,8 +1,8 @@
 const express = require('express');
 const Data = require('./data');
 
-const calendar = Data('calendar', { hasMany: 'day' });
-const day = Data('data');
+const calendar = Data('calendar', { hasMany: 'days' });
+const day = Data('days');
 
 var api = express.Router();
 
@@ -50,23 +50,24 @@ api.route('/calendars/:id')
 api.route('/days')
   .post((req, res) => {
     const data = req.body.data;
-    const calendar = calendars.get(data.relationships.calendar.data.id);
-    const day = days.insert(data.attributes, calendar);
+    const cal = calendar.get(data.relationships.calendar.data.id);
+    console.log('cal', cal);
+    const d = day.insert(data.attributes, cal);
 
-    res.json({ data: days.res(day) })
+    res.json({ data: day.res(d) })
   })
 // TODO remove day option
 api.route('/days/:id')
-  .get ( (req, res) =>
+  .get ((req, res) =>
     res.json({
-      data: days.res(day.get(req.params.id))
+      data: day.res(day.get(req.params.id))
     })
   )
 
   .patch((req, res) => {
     const data = req.body.data;
     res.json({
-      data: days.update(data.id, data.attribute)
+      data: day.update(data.id, data.attribute)
     })
   })
 
