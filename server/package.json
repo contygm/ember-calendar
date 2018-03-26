@@ -5,14 +5,12 @@
   "license": "MIT",
   "author": "",
   "directories": {
-    "dist": "dist",
+    "dist": "dist"
   },
   "repository": "",
   "scripts": {
     "build": "npm run build",
-    "start": "node server",
-  },
-  "devDependencies": {
+    "start": "node server"
   },
   "engines": {
     "node": ">= 4"
