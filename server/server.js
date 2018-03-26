@@ -7,6 +7,7 @@ const api = require('./api');
 //
 var app = express();
  app
+  .use(express.static(__dirname + '/dist'))
   .use(bodyParser.urlencoded({ extended: true}))
   .use(bodyParser.json({ type: 'application/vnd.api+json' }))
   .use('/api', api)
@@ -17,6 +18,7 @@ var app = express();
       res.status(400).send({ error: 'invalid_grant'});
     }
   })
+  .get('*', (req, res) => res.sendFile(__dirname + '/dist/index.html'))
   .listen(4300, function () {
     console.log('server is live');
   })
