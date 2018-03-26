@@ -6,7 +6,7 @@
   "author": "",
   "main": "server.js",
   "scripts": {
-    "build": "npm run build",
+    "build": "node server",
     "start": "node server"
   },
   "engines": {
