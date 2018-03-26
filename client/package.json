@@ -11,7 +11,7 @@
   "repository": "",
   "scripts": {
     "build": "ember build",
-    "start": "ember server",
+    "start": "ember server && node server/server.js",
     "test": "ember test"
   },
   "devDependencies": {
