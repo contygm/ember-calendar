@@ -31,4 +31,10 @@ Description from Udemy: Learn how to build ambitious single-page web application
 
 `node server`
 
+https://github.com/heroku/heroku-buildpack-emberjs
 https://www.emberaddons.com/
+https://emberigniter.com/articles/
+https://emberigniter.com/real-world-authentication-with-ember-simple-auth/
+
+http://cdn.makeuseof.com/wp-content/uploads/2014/12/Journey-beautiful-journal-app-Android-Chrome-calendar.png?b9031b
+https://androidexample365.com/a-better-calendar-for-android/
