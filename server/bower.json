@@ -1,0 +1,17 @@
+{
+  "name": "my-new-app",
+  "description": "Small description for my-new-app goes here",
+  "main": "",
+  "license": "MIT",
+  "homepage": "https://github.com/contygm/ember-calendar",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "moment": "^2.21.0"
+  }
+}
